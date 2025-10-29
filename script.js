@@ -48,56 +48,36 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  // === Weather API ===
+  // === Weather API (OpenWeatherMap) ===
   const iconEl = document.getElementById("weather-icon");
   const tempEl = document.getElementById("weather-temp");
   const descEl = document.getElementById("weather-desc");
   const widgetEl = document.getElementById("weather-widget");
 
-  const apiKey = "kydb55klq3w7h67ibhqti8wn0wa5ghgwrap8ysm4";
-  const lat = "10.7769";
-  const lon = "106.7009";
-
-  const weatherIcons = {
-    clear: "sun.png",
-    partly_cloudy: "partly_cloudy.png",
-    cloudy: "cloud.png",
-    overcast: "overcast.png",
-    fog: "fog.png",
-    light_rain_showers: "light_rain.png",
-    rain_showers: "rain.png",
-    heavy_rain_showers: "heavy_rain.png",
-    light_snow_showers: "light_snow.png",
-    snow_showers: "snow.png",
-    thunderstorm: "thunder.png",
-    thunderstorm_with_rain: "storm_rain.png",
-    clear_night: "moon.png",
-    partly_cloudy_night: "moon_cloud.png"
-  };
-
-  const url = `https://api.meteosource.com/v1/free/point?lat=${lat}&lon=${lon}&key=${apiKey}&fields=temperature_2m,weather_code`;
+  const apiKey = "dc3825065d9c378a7c65cd7e1656fe03"; // OpenWeatherMap key
+  const city = "Ho Chi Minh City";
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=vi`;
 
   fetch(url)
     .then(res => res.json())
     .then(data => {
-      const code = data.weather_code;
-      const temp = data.temperature_2m;
-      const iconFile = weatherIcons[code] || "default.png";
+      const temp = Math.round(data.main.temp);
+      const desc = data.weather[0].description;
+      const iconCode = data.weather[0].icon;
 
-      iconEl.src = `./icons/${iconFile}`;
       tempEl.textContent = `${temp}°C`;
-      descEl.textContent = code.replace(/_/g, " ").toUpperCase();
+      descEl.textContent = desc.charAt(0).toUpperCase() + desc.slice(1);
+      iconEl.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
-      // Hiển thị widget với hiệu ứng
       widgetEl.classList.add("show");
 
       // Nếu là ban đêm, thêm class night
-      if (code.includes("night")) {
+      if (iconCode.endsWith("n")) {
         widgetEl.classList.add("night");
       }
     })
     .catch(err => {
-      console.error("Lỗi fetch weather:", err);
+      console.error("Lỗi fetch thời tiết:", err);
       tempEl.textContent = "N/A";
       descEl.textContent = "Không tải được";
       iconEl.src = "./icons/default.png";
