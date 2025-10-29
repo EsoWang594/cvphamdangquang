@@ -1,0 +1,182 @@
+
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wang — Portfolio IoT | Phạm Đăng Quang</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+        <img src="avatar.jpg" alt="Ảnh đại diện ESO" class="avatar-small" />
+        <div class="brand-text">
+          <span class="name"> Phạm Đăng Quang</span>
+          <span class="role">Sinh viên năm cuối · Công nghệ vật lý điện tử và tin học</span>
+        </div>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#about">Giới thiệu</a>
+        <a href="#skills">Kỹ năng</a>
+        <a href="#projects">Dự án</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+
+      <button id="menuToggle" class="menu-toggle" aria-label="Mở menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / HOME -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <img src="avatar.jpg" alt="Ảnh ESO" class="hero-avatar" />
+          <h1>Xin chào, tôi là Quang</h1>
+          <p class="lead">
+            Sinh viên cuối ngành Công nghệ vật lý điện từ và tin học .Chuyên về hệ thống nhúng, lập trình vi điều khiển và giải pháp IoT ứng dụng.
+          </p>
+
+          <div class="cta">
+            <!-- Cập nhật email trong mailto: nếu bạn muốn nhận thư -->
+            <a class="btn btn-primary" href="mailto:your.email@example.com">Gửi email</a>
+            <a class="btn btn-outline" href="https://github.com/EsoWang594/myporfolio" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-ghost" href="https://www.instagram.com/andrew_tmh/#" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+
+        <div class="highlight">
+          <div class="card soft">
+            <h3>Đang tìm: Thực tập / Việc làm IoT</h3>
+            <p>Tôi đang tìm cơ hội thực tập để đóng góp và học hỏi trong môi trường chuyên nghiệp.</p>
+          </div>
+
+          <div class="card soft">
+            <h4>Công cụ & phần mềm</h4>
+            <ul>
+              <li>Proteus · Quartus II · VS Code · SolidWorks</li>
+              <li>PlatformIO · Arduino IDE · ESP-IDF</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <div class="section-inner">
+        <h2>Giới thiệu</h2>
+        <p>
+          Tôi là <strong>Quang</strong> sinh viên năm cuối ngành Công nghệ vật lý điện tử và tin học  tại Trường Đại học Khoa học Tự nhiên. Tôi có kiến thức vững về hệ thống nhúng, lập trình vi điều khiển, cảm biến, kết nối không dây và xây dựng hệ thống IoT hoàn chỉnh.
+        </p>
+        <p>
+          Đam mê phát triển giải pháp công nghệ ứng dụng cao: nhà thông minh, giám sát môi trường, tự động hóa và điều khiển từ xa. Tôi hướng tới hệ thống ổn định, khả năng mở rộng và UX tốt. Kỹ năng mềm: làm việc nhóm, tư duy logic, chủ động cập nhật công nghệ.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2>Kỹ năng</h2>
+        <div class="skills-grid">
+          <div class="skill-card soft">
+            <h3>Ngôn ngữ & Firmware</h3>
+            <p>C · C++ · Embedded C · AVR · ARM Cortex · ESP32 (ESP-IDF)</p>
+          </div>
+          <div class="skill-card soft">
+            <h3>Giao tiếp & Protocals</h3>
+            <p>UART · I2C · SPI · MQTT · HTTP · WebSocket</p>
+          </div>
+          <div class="skill-card soft">
+            <h3>Tools & CAD</h3>
+            <p>Proteus · SolidWorks · Quartus II · PlatformIO · VS Code</p>
+          </div>
+          <div class="skill-card soft">
+            <h3>Machine Learning (ứng dụng)</h3>
+            <p>Python · scikit-learn · TensorFlow/Keras (mô hình phân loại cảm xúc NLP)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <h2>Dự án</h2>
+      <div class="projects-grid">
+        <article class="project-card soft">
+          <h3>Hệ thống nhà thông minh (ESP32)</h3>
+          <p>Mô tả: Hệ thống điều khiển đèn, điều hòa, cảm biến nhiệt độ/độ ẩm, truy cập từ xa qua app/Web, giao tiếp MQTT và OTA update.</p>
+          <p><strong>Vai trò:</strong> Thiết kế phần cứng, lập trình ESP32, tích hợp MQTT và giao diện web.</p>
+
+        </article>
+
+        <article class="project-card soft">
+          <h3>Xe thám hiểm điều khiển từ xa (ATmega128)</h3>
+          <p>Mô tả: Robot di chuyển 4 bánh, điều khiển từ xa, thu thập dữ liệu cảm biến, truyền tín hiệu tới trạm điều khiển.</p>
+          <p><strong>Vai trò:</strong> Lập trình vi điều khiển ATmega128, điều khiển motor, hệ thống điều hướng cơ bản.</p>
+        </article>
+
+        <article class="project-card soft">
+          <h3>Ứng dụng ML phân loại cảm xúc dựa trên ngôn ngữ</h3>
+          <p>Mô tả: Pipeline tiền xử lý tiếng Việt, mô hình học máy phân loại cảm xúc từ phản hồi/ngôn ngữ, demo giao diện web.</p>
+          <p><strong>Vai trò:</strong> Tiền xử lý dữ liệu, huấn luyện mô hình, triển khai demo.</p>
+          <a class="link" href="https://github.com/EsoWang594/myporfolio" target="_blank" rel="noopener">Xem repo trên GitHub</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact-grid">
+        <div class="contact-card soft">
+          <h2>Liên hệ</h2>
+          <p>Nếu bạn quan tâm đến hồ sơ/ứng tuyển hoặc cần hợp tác, vui lòng liên hệ:</p>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:stevephamlol123@gmail.com">stevephamlol123@gmail.com</a> <span class="muted"></span></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/EsoWang594/myporfolio" target="_blank" rel="noopener">github.com/EsoWang594</a></li>
+            <li><strong>Instagram:</strong> <a href="https://www.instagram.com/andrew_tmh/#" target="_blank" rel="noopener">@andrew_tmh</a></li>
+          </ul>
+
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:stevephamlol123@gmail.com">Gửi email</a>
+            <a class="btn btn-outline" href="https://github.com/EsoWang594/myporfolio" target="_blank" rel="noopener">Xem GitHub</a>
+          </div>
+        </div>
+
+        <div class="map-card soft">
+          <h3>Ảnh đại diện</h3>
+          <img src="avatar.jpg" alt="Ảnh Wang" class="avatar-large" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Wang — Phạm Đăng Quang.</p>
+    </div>
+  </footer>
+  
+        <!-- Weather Widget -->
+    <div id="weather-widget" class="weather-widget">
+      <img id="weather-icon" src="" alt="Biểu tượng thời tiết" width="48" height="48">
+      <div class="weather-info">
+        <span id="weather-temp">--°C</span>
+        <span id="weather-desc">Đang tải...</span>
+        <span id="weather-location">TP. Hồ Chí Minh</span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
